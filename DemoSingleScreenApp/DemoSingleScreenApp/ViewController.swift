@@ -12,20 +12,21 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var theLabel: UILabel!
     
-    var TapCount = 0
+    
+    @IBOutlet weak var Number1: UITextField!
+    
+    
+    @IBOutlet weak var Number2: UITextField!
+    
     
     @IBAction func buttonOther(_ sender: Any) {
-        
-        TapCount = TapCount + 1
-        print(TapCount)
     }
+    
+    
     @IBAction func buttonTapped(_ sender: Any) {
-        
-        TapCount = TapCount + 1
-        print(TapCount)
-        if TapCount >= 10 {
-            theLabel.text = "Tap me again"
-        }
+        theLabel.text = "The Answer is... \(Double(Number1.text!)! + Double(Number2.text!)!)"
+        print(Number1.text!)
+        print(Number2.text!)
     }
     
     
